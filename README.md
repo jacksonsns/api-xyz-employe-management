@@ -24,3 +24,6 @@ Você pode verificar todas as dependências relacionadas ao laravel [aqui](https
 4. Gere a key do projeto e instale as migrates.<br>
 `php artisan key:generate`<br>
 `php artisan migrate`
+
+2. Rodar as seeds para importar o usuário Admin ao banco
+` php artisan db:seed --class=AdministratorSeeder `
