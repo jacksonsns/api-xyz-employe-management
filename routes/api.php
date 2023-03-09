@@ -16,13 +16,10 @@ use App\Http\Controllers\api\UserController;
 |
 */
 
-Route::get('/administrador', [FuncionarioController::class, 'index']);
-Route::put('/{nome}/validar', [FuncionarioController::class, 'update']);
-Route::get('/funcionarios/search', [FuncionarioController::class, 'search']);
-
 Route::middleware(['auth:sanctum'])->group(function () {
-
-
+    Route::get('/administrador', [FuncionarioController::class, 'index']);
+    Route::put('/{nome}/validar', [FuncionarioController::class, 'update']);
+    Route::get('/funcionarios/search', [FuncionarioController::class, 'search']);
     Route::post('/logout', [UserController::class, 'logout']);
 });
 
