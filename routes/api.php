@@ -16,14 +16,12 @@ use App\Http\Controllers\api\UserController;
 |
 */
 
-Route::middleware(['auth:sanctum'])->group(function () {
+Route::middleware(['auth'])->group(function () {
     Route::get('/administrador', [FuncionarioController::class, 'index']);
     Route::put('/{nome}/validar', [FuncionarioController::class, 'update']);
     Route::get('/funcionarios/search', [FuncionarioController::class, 'search']);
     Route::post('/logout', [UserController::class, 'logout']);
 });
 
-Route::middleware(['guest'])->group(function () {
-    Route::post('/login', [UserController::class, 'login']);
-    Route::post('/funcionarios/registrar', [FuncionarioController::class, 'store']);
-});
+Route::post('/login', [UserController::class, 'login']);
+Route::post('/funcionarios/registrar', [FuncionarioController::class, 'store']);
