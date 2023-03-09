@@ -25,5 +25,5 @@ Você pode verificar todas as dependências relacionadas ao laravel [aqui](https
 `php artisan key:generate`<br>
 `php artisan migrate`
 
-2. Rodar as seeds para importar o usuário Admin ao banco
+2. Rodar as seeds para importar o usuário Admin ao banco<br>
 ` php artisan db:seed --class=AdministratorSeeder `
