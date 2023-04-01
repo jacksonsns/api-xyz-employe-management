@@ -1,4 +1,4 @@
-# API Rest - Baseado em Laravel com Docker
+# API Rest Laravel
 
 ## Requirements:
 
